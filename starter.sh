@@ -32,7 +32,7 @@ GETHEXTIP=<specify your external IP address here>
 GETHNETID=<specify your network ID here>
 # network ID for your blockchain network
 
-GETHMAINWALLET=0x7bdB5A630fcB0e87c76F8701de60EC4fC8727a1f
+GETHMAINWALLET=<specify your main wallet address here>
 # main Ethereum wallet of this node - will be unlocked to sign the transactions using password in password.txt
 
 GETHCACHESIZE=2048
