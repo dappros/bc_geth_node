@@ -42,9 +42,7 @@ GETHCACHESIZE=2048
 # add the following in the end of the geth parameters if you want to run this node in Archive mode: ' --gcmode=archive'
 
 
-while ! geth geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api ">
-
-geth --datadir data --rpc --rpcport "8545" --rpcaddr $GETHINTIP --rpccorsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --rpcapi "web3,personal,eth,net">
+while ! geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api ">
 do
   sleep 1
   echo "Restarting geth following some termination.."
