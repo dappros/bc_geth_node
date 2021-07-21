@@ -25,11 +25,14 @@ GETHMAINWALLET=<specify your main wallet address here>
 GETHCACHESIZE=2048
 # cache size for Geth node (beware of the known issue where a lot of blocks may be stored in RAM if cache is large, need to use a periodic graceful restart script as a workarou>
 
+GETHBOOTNODE1=enode://d1dd3b3e1953d7741c3d115f3ce107c753579043bb2ef9a5353908066fdf106fb4ef283e88e6bec0798816a35ea9fe7721e3579d5d4246ca3d0f0f96d2f58a0a@172.31.29.142:0?discport=30310
+GETHBOOTNODE2=enode://0a8fb2f8da8c2e5bcc661449663f4952fb9d23d1fa6c767ec405c2e67ea2e3a5a27a43240f72ab80ac839c869dce84d75df658ae8adf73c3f5d23387b8f3c70a@127.0.0.1:0?discport=30310
+GETHBOOTNODE3=enode://b0b7a3cee3ed876efa3a19566a2b0b4fd2133e86cd84026d9708b0f0018e924cb582ff4d2007a777ebc485404683f5dc0c49849c51f2199962ac476733fc3ea9@127.0.0.1:0?discport=30310
+
 # ARCHIVE MODE
 # add the following in the end of the geth parameters if you want to run this node in Archive mode: ' --gcmode=archive'
 
-
-while ! geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api ">
+while ! geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api "web3,personal,eth,net" --ws.api personal,web3,eth,net --unlock $GETHMAINWALLET --password password.txt --cache $GETHCACHESIZE --allow-insecure-unlock console --networkid $GETHNETID --mine --nat extip:$GETHEXTIP --bootnodes $GETHBOOTNODE1 $GETHBOOTNODE2 $GETHBOOTNODE3
 do
   sleep 1
   echo "Restarting geth following some termination.."
