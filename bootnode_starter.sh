@@ -11,7 +11,7 @@
 # (3) Press 'Ctrl+a' and then 'd' to detach from screen session
 # You can always re-attach screen session via 'screen-r' or you can check logs
 
-while ! bootnode -nodekey boot.key -verbosity 9 -addr :30310
+while ! bootnode -nodekey bootnode.key -verbosity 9 -addr :30310
 do
   sleep 1
   echo "Restarting bootnode service following some termination.."
