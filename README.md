@@ -1,4 +1,4 @@
-# bc_geth_node
+# blockchain geth node (PoA) set up and maintenance
 Dappros Platform (Ethereum-based) BC node documentation and service scripts 
 
 Some documentation here to:
