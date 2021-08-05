@@ -66,12 +66,35 @@ pkill screen
 
 geth --datadir data removedb
 
+#### remove keystore data 
 
+rm data/keystore/*.*
 
+#### uncompress the chaindata file to be imported (update with your correct filenames)
 
+tar -xvzf backupsImport/p01chain210805.gz -C backupsImport
 
+geth --datadir data import backupsImport/backups/p01chain210805
 
+#### check that keystore directory is empty in the target node
 
+ls data/keystore
+
+#### uncompress the keystore data  (update with your correct filenames)
+
+tar -xvzf backupsImport/p01keys210805.gz -C .
+
+#### init your target b/c nodes with your correct genesis file
+
+geth --datadir data init dppprod.json
+
+#### import chaindata file (takes 5 minutes for a 300Mb file with 500k blocks) 
+
+geth --datadir data import backupsImport/backups/p01chain210805
+
+#### delete uncompressed chaindata file
+
+rm backupsImport/backups/p01chain210805
 
 
 
