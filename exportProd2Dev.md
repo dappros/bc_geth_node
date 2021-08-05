@@ -50,6 +50,35 @@ scp -i mykey.pem backups/p01chain$(date +%y%m%d).gz ubuntu@my.ec2.id.amazonaws.c
 
 ## Import chaindata and keys
 
+#### Stop all b/c nodes in the network where you're importing the chain 
+
+ps aux | grep geth
+
+kill [PID]
+
+ps aux | grep geth
+
+#### if the above still returns a new running geth process, then kill screen utility to stop it from restarting it:
+
+pkill screen
+
+#### remove chaindata (answer "y" to all questions)
+
+geth --datadir data removedb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
