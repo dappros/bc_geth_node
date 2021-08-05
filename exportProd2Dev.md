@@ -41,7 +41,7 @@ rm backups/p01chain$(date +%y%m%d)
 
 tar -czvf backups/p01keys$(date +%y%m%d).gz data/keystore
 
-### copy chaindata and keydata to remote host (your QA node, for example)
+#### copy chaindata and keydata to remote host (your QA node, for example)
 
 
 
