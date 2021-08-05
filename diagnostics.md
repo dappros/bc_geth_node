@@ -12,5 +12,7 @@ admin.peers.forEach(function(value){console.log(value.network.remoteAddress+"\t"
 ## KILL GETH PROCESS
 
 pkill screen
+
 ps aux | grep geth
+
 kill -9 <pid>  // use process ID obtained from the above
