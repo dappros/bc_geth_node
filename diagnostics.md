@@ -15,4 +15,4 @@ pkill screen
 
 ps aux | grep geth
 
-kill -9 <<pid>>  // use process ID obtained from the above
+kill -9 [PID]  // use process ID obtained from the above
