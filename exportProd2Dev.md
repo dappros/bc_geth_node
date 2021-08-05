@@ -1,4 +1,4 @@
-### Sync/Export Prod to Dev blockchain nodes
+### Plan (to Sync/Export Prod to Dev blockchain nodes)
 
 1. Login to Prod b/c node N1
 2. Export b/c data via “geth export”
