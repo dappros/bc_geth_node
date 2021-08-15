@@ -25,5 +25,11 @@ cd /data/keystore
 
 find . -type f | wc -l
 
+## EMULATE OOM
+
+Node overload due to out of memory (OOM) can cause the loss of blocks as Geth node stores many latest blocks in memory especially on private chains where block size is very small.
+OOM may be caused by intenstive load over the node RPC, for example, even if otherwise it may be not overloaded. OOM kills geth service resulting in loss of blocks stored in the memory. To test such scenario and verify whether the system can recover blocks from other nodes we emulate the OOM using this command: 
+
+tail /dev/zero
 
 
