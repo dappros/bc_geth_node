@@ -6,6 +6,10 @@ Check /var/log/syslog around the specific time for detailed information in case 
 
 ## GETH CONSOLE
 
+### Attach console
+
+sudo geth attach ~/data/geth.ipc
+
 ### Check connected peers
 admin.peers.forEach(function(value){console.log(value.network.remoteAddress+"\t"+value.name)})
 
