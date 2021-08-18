@@ -16,6 +16,13 @@ bootnode -nodekey boot.key -verbosity 9 -addr :30310
 Enode boot key should be specified correctly. 
 Note that bootnode key is 64 bytes but enode address is 128 bytes:
 
+use
+
+admin.nodeInfo
+
+to get your enode URL
+
+
 #### Example in our Q01 node:
 
 ##### In bootnode.key file:
