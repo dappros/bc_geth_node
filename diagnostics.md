@@ -36,4 +36,10 @@ OOM may be caused by intenstive load over the node RPC, for example, even if oth
 
 tail /dev/zero
 
+## CLEAN CHAINDATA 
+
+geth --datadir data removedb
+
+geth --datadir data init dppprod.json
+(replace dppprod.json with your genesis file)
 
