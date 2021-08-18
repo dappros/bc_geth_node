@@ -41,5 +41,6 @@ tail /dev/zero
 geth --datadir data removedb
 
 geth --datadir data init dppprod.json
+
 (replace dppprod.json with your genesis file)
 
