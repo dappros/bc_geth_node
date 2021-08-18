@@ -32,7 +32,7 @@ GETHBOOTNODE3=enode://b0b7a3cee3ed876efa3a19566a2b0b4fd2133e86cd84026d9708b0f001
 # ARCHIVE MODE
 # add the following in the end of the geth parameters if you want to run this node in Archive mode: ' --gcmode=archive'
 
-while ! geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api "web3,personal,eth,net" --ws.api personal,web3,eth,net --unlock $GETHMAINWALLET --password password.txt --cache $GETHCACHESIZE --allow-insecure-unlock console --networkid $GETHNETID --mine --nat extip:$GETHEXTIP --bootnodes $GETHBOOTNODE1 $GETHBOOTNODE2 $GETHBOOTNODE3 --syncmode=full
+while ! geth --datadir data --http --http.port "8545" --http.addr $GETHINTIP --http.corsdomain "*" --ws --ws.origins "*" --ws.addr $GETHINTIP --ws.port "8546" --http.api "web3,personal,eth,net" --ws.api personal,web3,eth,net --unlock $GETHMAINWALLET --password password.txt --cache $GETHCACHESIZE --allow-insecure-unlock console --networkid $GETHNETID --mine --nat extip:$GETHEXTIP --bootnodes $GETHBOOTNODE1 $GETHBOOTNODE2 $GETHBOOTNODE3 --syncmode=full --nodekey bootnode.key --port 30303
 do
   sleep 1
   echo "Restarting geth following some termination.."
