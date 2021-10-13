@@ -43,3 +43,8 @@ On cloned node (for example Q02 -> Q03) sometimes re-generating bootnode.key doe
 This may be due to node key stored in Geth default system path: 
 
 sudo cat ~/.ethereum/geth/nodekey
+
+
+### Static / manual nodes
+
+https://www.edureka.co/community/10006/how-to-connect-peers-to-a-private-network-using-geth
