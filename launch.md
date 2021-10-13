@@ -34,3 +34,12 @@ GETHBOOTNODE1=enode://1fd3fba1b026e11be2a4ce959cdd9c75d6b18c51a4adcf34619818527e
 
 ##### In geth console on startup:
 self=enode://1fd3fba1b026e11be2a4ce959cdd9c75d6b18c51a4adcf3461981852de94fc5ac57b6e94e91a972f6822ee5d292199a90d7d335842c61602af20@3.129.190.111:30303
+
+
+### Changing Enode key on a cloned node
+
+On cloned node (for example Q02 -> Q03) sometimes re-generating bootnode.key doesn't help and geth starts with same enode address as the original node (Q02 in our example). 
+
+This may be due to node key stored in Geth default system path: 
+
+sudo cat ~/.ethereum/geth/nodekey
