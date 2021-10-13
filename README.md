@@ -1,5 +1,6 @@
 # blockchain geth node (PoA) set up and maintenance
-Dappros Platform (Ethereum-based) BC node documentation and service scripts 
+BC node documentation and service scripts 
+We use these to maintain our Dappros Platform which is Ethereum-based, but you might find these useful for your own Geth- / Ethereum- based projects.
 
 Some documentation here to:
 * Launch
