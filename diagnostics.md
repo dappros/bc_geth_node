@@ -32,6 +32,10 @@ ps aux | grep geth
 
 kill [PID] // use process ID obtained from the above (in our experiments "kill -9 [PID]" also results in a graceful stop but is not necessary, since usual "kill" also works for geth process)
 
+## CHECK PENDING TRANSACTIONS
+
+eth.pendingTransactions
+
 ## CHECK ACCOUNTS/WALLETS
 
 Get the number of accounts/wallets in the keystore directory of the node
