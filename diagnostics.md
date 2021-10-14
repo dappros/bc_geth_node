@@ -13,6 +13,12 @@ sudo geth attach ~/data/geth.ipc
 ### Check connected peers
 admin.peers.forEach(function(value){console.log(value.network.remoteAddress+"\t"+value.name)})
 
+### Check misc node info (including enode address etc)
+admin.nodeInfo
+
+### Add another peer manually
+admin.addPeer("put enode address here")
+
 ## KILL GETH PROCESS
 
 pkill screen
