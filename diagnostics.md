@@ -59,3 +59,7 @@ geth --datadir data init dppprod.json
 
 (replace dppprod.json with your genesis file)
 
+## MAKING BACKUPS / COPIES OF B/C NODES
+
+1. Before making a backup / image of BC node, make sure to gracefully stop Geth service so it saves latest state from memory to disk. Otherwise you will backup the old state from filesystem. 
+2. Make sure to enable “No reboot” checkbox when making an image of a working BC node in AWS. 
