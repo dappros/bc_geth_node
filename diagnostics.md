@@ -55,11 +55,12 @@ tail /dev/zero
 
 geth --datadir data removedb
 
+Note: in some cases we have to manually delete everything inside /data/ folder except /keystore/ 
+
 geth --datadir data init dppprod.json
 
 (replace dppprod.json with your genesis file)
 
-Note: in some cases we have to manually delete everything inside /data/ folder except /keystore/ 
 
 ## MAKING BACKUPS / COPIES OF B/C NODES
 
