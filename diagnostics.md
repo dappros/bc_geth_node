@@ -59,6 +59,8 @@ geth --datadir data init dppprod.json
 
 (replace dppprod.json with your genesis file)
 
+Note: in some cases we have to manually delete everything inside /data/ folder except /keystore/ 
+
 ## MAKING BACKUPS / COPIES OF B/C NODES
 
 1. Before making a backup / image of BC node, make sure to gracefully stop Geth service so it saves latest state from memory to disk. Otherwise you will backup the old state from filesystem. 
